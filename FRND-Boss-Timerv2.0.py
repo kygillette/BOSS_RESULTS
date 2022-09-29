@@ -111,6 +111,8 @@ def boss_results():
 
                if "Sanguineous" in textA:
                    sheet.update_acell('H4', now_formatted)
+               elif "Sangvineous" in textA:
+                   sheet.update_acell('H4', now_formatted)
                elif "Great Abyssal Hornbeast" in textA:
                    sheet.update_acell('H5', now_formatted)
                elif "Terrorwood" in textA:
@@ -130,6 +132,8 @@ def boss_results():
                elif "Gargoyle Archon" in textA:
                    sheet.update_acell('H13', now_formatted)
                elif "Aegis High Priestess" in textA:
+                   sheet.update_acell('H14', now_formatted)
+               elif "Regis High Priestess" in textA:
                    sheet.update_acell('H14', now_formatted)
                elif "Behemoth Basilisk" in textA:
                    sheet.update_acell('H15', now_formatted)
