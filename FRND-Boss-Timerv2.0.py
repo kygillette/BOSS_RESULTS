@@ -129,6 +129,8 @@ def boss_results():
                    sheet.update_acell('H11', now_formatted)
                elif "Ancient Drowned Dragon" in textA:
                    sheet.update_acell('H12', now_formatted)
+               elif "Aneient Drowned Dragon" in textA:
+                   sheet.update_acell('H12', now_formatted)
                elif "Gargoyle Archon" in textA:
                    sheet.update_acell('H13', now_formatted)
                elif "Aegis High Priestess" in textA:
