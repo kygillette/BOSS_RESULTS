@@ -174,7 +174,7 @@ def boss_results():
                    log_file.write('BossFound: ' + CURRENT_HASH + '\n')
                    log_file.write('BossFound: ' + textA[:-1] + '\n')
 
-       else:
+       #else:
             #print("SAME BOSS RESULTS - SKIPPED")
 
             #Write to Log
