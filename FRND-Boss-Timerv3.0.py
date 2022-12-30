@@ -168,7 +168,7 @@ def boss_results():
                    log_file.write('BossFound: ' + CURRENT_HASH + '\n')
                    log_file.write('BossFound: ' + textA[:-1] + '\n')
                    summoned_boss = False
-               else
+               else:
                    log_file.write('BossFound: ' + 'Boss was witten to sheet\n')
                    log_file.write('BossFound: ' + now_formatted + '\n')
                    log_file.write('BossFound: ' + CURRENT_HASH + '\n')
