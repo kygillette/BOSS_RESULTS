@@ -155,16 +155,24 @@ def boss_results():
            #Write to Log
            with open(Boss_Results_Log_Path, 'a') as log_file:
 
-               log_file.write('BossFound: ' + now_formatted + '\n')
-               log_file.write('BossFound: ' + CURRENT_HASH + '\n')
-               log_file.write('BossFound: ' + textA[:-1] + '\n')
-               if unknown_boss:
-                   log_file.write('BossFound: ' + 'Unknown boss was not witten to sheet\n')
-                   unknown_boss = False
 
-               if summoned_boss:
-                   log_file.write('BossFound: ' + 'Summoned boss was not witten to sheet\n')
+               if unknown_boss:
+                   log_file.write('UnknownBoss: ' + 'Unknown boss was not witten to sheet\n')
+                   log_file.write('BossFound: ' + now_formatted + '\n')
+                   log_file.write('BossFound: ' + CURRENT_HASH + '\n')
+                   log_file.write('BossFound: ' + textA[:-1] + '\n')
+                   unknown_boss = False
+               elif summoned_boss:
+                   log_file.write('SummonedBoss: ' + 'Summoned boss was not witten to sheet\n')
+                   log_file.write('BossFound: ' + now_formatted + '\n')
+                   log_file.write('BossFound: ' + CURRENT_HASH + '\n')
+                   log_file.write('BossFound: ' + textA[:-1] + '\n')
                    summoned_boss = False
+               else
+                   log_file.write('BossFound: ' + 'Boss was witten to sheet\n')
+                   log_file.write('BossFound: ' + now_formatted + '\n')
+                   log_file.write('BossFound: ' + CURRENT_HASH + '\n')
+                   log_file.write('BossFound: ' + textA[:-1] + '\n')
 
        else:
             #print("SAME BOSS RESULTS - SKIPPED")
