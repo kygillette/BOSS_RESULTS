@@ -155,17 +155,15 @@ def boss_results():
            #Write to Log
            with open(Boss_Results_Log_Path, 'a') as log_file:
 
-               log_file.write(now_formatted + '\n')
-               log_file.write(CURRENT_HASH + '\n')
-               log_file.write(textA[:-1] + '\n')
+               log_file.write('BossFound: ' + now_formatted + '\n')
+               log_file.write('BossFound: ' + CURRENT_HASH + '\n')
+               log_file.write('BossFound: ' + textA[:-1] + '\n')
                if unknown_boss:
-                   log_file.write(textA[:-1] + '\n')
-                   log_file.write('Unknown boss was not witten to sheet\n')
+                   log_file.write('BossFound: ' + 'Unknown boss was not witten to sheet\n')
                    unknown_boss = False
 
                if summoned_boss:
-                   log_file.write(textA[:-1] + '\n')
-                   log_file.write('Summoned boss was not witten to sheet\n')
+                   log_file.write('BossFound: ' + 'Summoned boss was not witten to sheet\n')
                    summoned_boss = False
 
        else:
