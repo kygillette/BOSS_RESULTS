@@ -19,7 +19,7 @@ scopes = [
 'https://www.googleapis.com/auth/spreadsheets',
 'https://www.googleapis.com/auth/drive'
 ]
-credentials = ServiceAccountCredentials.from_json_keyfile_name(r"C:\SheetsAPIKEY\frnd-boss-results-8ec834ed771a.json", scopes) #access the json key you downloaded earlier
+credentials = ServiceAccountCredentials.from_json_keyfile_name(r"C:\SheetsAPIKEY\frnd-boss-results-188069ccdca7.json", scopes) #access the json key you downloaded earlier
 file = gspread.authorize(credentials) # authenticate the JSON key with gspread
 sheet = file.open("[FRND] Boss Timers")  #open sheet
 sheet = sheet.sheet1  #replace sheet_name with the name that corresponds to yours, e.g, it can be sheet1
@@ -125,7 +125,7 @@ def boss_results():
                    sheet.update_acell('H10', now_formatted)
                elif "Speaker for the Dead" in textA or "Speaker" in textA or "for" in textA or "Dead" in textA:
                    sheet.update_acell('H11', now_formatted)
-               elif "Ancient Drowned Dragon" in textA or "Aneient" in textA or "Ancient" in textA or "Drowned" in textA or "Dragon" in textA:
+               elif "Ancient Drowned Dragon" in textA or "Aneient" in textA or "Ancient" in textA or "Drowned" in textA:
                    sheet.update_acell('H12', now_formatted)
                elif "Gargoyle Archon" in textA or "Archon" in textA:
                    sheet.update_acell('H13', now_formatted)
